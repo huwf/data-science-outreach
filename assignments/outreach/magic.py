@@ -98,3 +98,27 @@ def get_next_time(time):
 
 
 # ----------------------------END MAGIC----------------------
+
+
+def get_time_in_seconds(str_time):
+    """
+    Returns the amount of seconds since midnight for the given time string
+    :str_time is a time string in the format 'HH:MM:SS' (24 hours)
+    """    
+    time_object = datetime.datetime.strptime(str_time, '%H:%M:%S')
+    return (time_object - datetime.datetime.strptime('00:00', '%H:%M')).seconds
+
+
+def get_time_in_str(seconds):
+    """
+    Returns a string of the time as 'HH:MM'
+    :seconds is the amount of seconds since midnight
+    """
+    a = datetime.datetime(1900,1,1,0,0,0)
+    b = a + datetime.timedelta(seconds=seconds)
+    return datetime.strftime(b, '%H:%M')
+
+
+
+
+
