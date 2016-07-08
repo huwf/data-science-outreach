@@ -103,8 +103,10 @@ def get_next_time(time):
 def get_time_in_seconds(str_time):
     """
     Returns the amount of seconds since midnight for the given time string
-    :str_time is a time string in the format 'HH:MM:SS' (24 hours)
+    :str_time is a time string in the format 'HH:MM:SS' or 'HH:MM' (24 hours)
     """    
+    if len(str_time.split(':')) == 2:
+           str_time += ':00'    
     time_object = datetime.datetime.strptime(str_time, '%H:%M:%S')
     return (time_object - datetime.datetime.strptime('00:00', '%H:%M')).seconds
 
