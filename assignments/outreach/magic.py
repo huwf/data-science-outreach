@@ -118,7 +118,7 @@ def get_time_in_str(seconds):
     """
     a = datetime.datetime(1900,1,1,0,0,0)
     b = a + datetime.timedelta(seconds=seconds)
-    return datetime.strftime(b, '%H:%M')
+    return datetime.datetime.strftime(b, '%H:%M')
 
 
 
