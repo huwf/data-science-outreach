@@ -26,8 +26,6 @@ c.JupyterHub.log_level = 'DEBUG'
 c.JupyterHub.authenticator_class = 'dummyauthenticator.DummyAuthenticator'
 c.DummyAuthenticator.create_system_users = False
 
-c.Authenticator.whitelist = whitelist = set(['hf1g10', 'bj1g11', 'Giles.Howard', 'J.S.Hare', 'R.Pau', 'dl1g13', 'bml1g12', 'bap1g13', 'qb1g13', 'aa7e14', 'e.simperl', 'cjp106', 'krb1g15', 'nhlw1g12'])
-
 join = os.path.join
 
 
